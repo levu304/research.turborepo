@@ -1,0 +1,24 @@
+{
+  "functions": {
+    "source": ".",
+    "codebase": "default",
+    "ignore": [
+      "node_modules",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log"
+    ],
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint",
+      "npm --prefix \"$RESOURCE_DIR\" run build"
+    ],
+    "runtime": "nodejs16"
+  },
+  "hosting": {
+    "target": "turbo-api",
+    "rewrites": {
+      "source": "**",
+      "functions": "turboApi"
+    }
+  }
+}

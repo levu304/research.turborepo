@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "vu-le-researching"
+  },
+  "targets": {
+    "vu-le-researching": {
+      "hosting": {
+        "turbo-api": [
+          "turbo-api"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

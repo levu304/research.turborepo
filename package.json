@@ -10,16 +10,22 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "deploy": "turbo run deploy --parallel"
   },
   "devDependencies": {
+    "concurrently": "^7.5.0",
     "eslint-config-custom": "*",
     "prettier": "latest",
+    "rimraf": "^3.0.2",
     "turbo": "latest"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "firebase-admin": "^11.2.0",
+    "firebase-functions": "3.24.1"
+  },
   "packageManager": "yarn@1.22.19"
 }

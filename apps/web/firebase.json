@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "target": "turbo-next",
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "turboNext"
+      }
+    ]
+  },
+  "functions": {
+    "source": ".",
+    "runtime": "nodejs16"
+  }
+}

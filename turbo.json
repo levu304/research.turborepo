@@ -1,6 +1,9 @@
 {
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
+    "deploy": {
+      "cache": false
+    },
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**"]
@@ -11,5 +14,6 @@
     "dev": {
       "cache": false
     }
-  }
+  },
+  "globalEnv": ["NODE_ENV"]
 }
